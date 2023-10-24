@@ -37,6 +37,14 @@ public class App {
       somaPeso += peso[i];
       somaNota += (peso[i] * nota[i]) / 100;
     }
+
+    if (somaPeso != 100) {
+      System.out.println("A soma dos pesos é diferente de 100!");
+      System.exit(0);
+    }
+    if (somaPeso == 100) {
+      System.out.println("Atividades cadastradas com sucesso!");
+    }
     scanner.close();
   }
 }
