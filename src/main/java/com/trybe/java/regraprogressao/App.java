@@ -19,6 +19,10 @@ public class App {
 
     String[] nome = new String[quantidadeAtividades];
     double[] peso = new double[quantidadeAtividades];
+    double[] nota = new double[quantidadeAtividades];
+
+    double somaPeso = 0;
+    double somaNota = 0;
 
     for (int i = 0; i < quantidadeAtividades; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ": ");
@@ -26,6 +30,12 @@ public class App {
       System.out.println("Digite o peso da atividade " + (i + 1) + ": ");
       peso[i] = scanner.nextDouble();
       scanner.nextLine();
+      System.out.println("Digite a nota da atividade " + (i + 1) + ": ");
+      nota[i] = scanner.nextDouble();
+      scanner.nextLine();
+
+      somaPeso += peso[i];
+      somaNota += (peso[i] * nota[i]) / 100;
     }
     scanner.close();
   }
